@@ -1,0 +1,18 @@
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<div id="content"></div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventlistener("DOMContentLoaded", () => {
+        document.getElementById("content").innerHTML = marked.parse(
+            "# Marked in browser\n\nRendered by **marked**.",
+        );
+        console.log(
+            "Content loaded",
+            marked.parse("# Marked in browser\n\nRendered by **marked**."),
+        );
+    });
+</script>

@@ -1,0 +1,19 @@
+{
+  "name": "notenough",
+  "version": "0.1.0",
+  "description": "Custom CSS/JS for Specific Pages",
+  "source": "src/background.js",
+  "main": "dist/background.js",
+  "scripts": {
+    "watch": "parcel watch src/*",
+    "build": "parcel build src/* --no-source-maps"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "marked": "^15.0.4",
+    "ollama": "^0.5.11"
+  }
+}
