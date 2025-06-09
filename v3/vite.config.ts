@@ -10,5 +10,6 @@ export default defineConfig({
         assetFileNames: `assets/[name].[ext]`,
       },
     },
+    // outDir: '../', //for github pages
   }
 })

@@ -1,0 +1,21 @@
+{
+    "version": "3.2.0",
+    "name": "Not Enough",
+    "description": "A Chrome extension to enhance your browsing experience.",
+    "manifest_version": 3,
+    "icons": {
+        "32": "fire.png"
+    },
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
+    "action": {},
+    "permissions": [
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
