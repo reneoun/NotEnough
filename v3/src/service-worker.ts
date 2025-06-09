@@ -9,3 +9,27 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
         files: ['assets/index.js']
     });
 });
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, _) => {
+    if (changeInfo.status === 'complete') {
+        chrome.scripting.executeScript({
+            target: { tabId: tabId },
+            files: ['assets/index.js']
+        });
+    }
+});
+
+chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
+    console.log("Service Worker: Received message", request);
+    
+    if (request.action === "set") {
+        localStorage.setItem(request.key, request.value);
+        sendResponse({ status: "success" });
+        return;
+    } 
+    if (request.action === "get") {
+        const value = localStorage.getItem(request.key);
+        sendResponse({ status: "success", value: value });
+        return;
+    }
+});
