@@ -1,5 +1,5 @@
 chrome.action.onClicked.addListener(() => {
-    chrome.tabs.create({ url: "https://example.com" }); // Replace with your desired URL
+    chrome.tabs.create({ url: "https://reneoun.github.io/NotEnough/" }); // Replace with your desired URL
     console.log("Service Worker: Browser Action button clicked 🔥🔥🔥⚡️");
 });
 
